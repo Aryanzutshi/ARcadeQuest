@@ -1,7 +1,7 @@
-import TableItem from './tableItem';
 import React, { Component } from 'react';
-import './styles/App.css';
+import TableItem from './tableItem';
 import { SIZE } from './constants';
+import './styles/App.css';
 
 let removeDec;
 class App extends Component {
@@ -12,8 +12,8 @@ class App extends Component {
   state = { gameOver: false, foundAllDiamond: false, score: SIZE * SIZE };
   componentWillMount() {
     while (this.diamondPositions.length < SIZE) {
-      let r = Math.floor(Math.random() * SIZE);
       let c = Math.floor(Math.random() * SIZE);
+      let r = Math.floor(Math.random() * SIZE);
       if (
         this.diamondPositions.findIndex(pos => pos.r === r && pos.c === c) ===
         -1
